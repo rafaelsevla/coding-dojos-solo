@@ -1,6 +1,8 @@
 🎯 Desafios:
 
-FizzBuzz:
+FizzBuzz
+<br>
+[codigo](https://github.com/rafaelsevla/coding-dojos-solo/blob/main/lib/fizz_buzz.rb) | [spec](https://github.com/rafaelsevla/coding-dojos-solo/blob/main/spec/fizz_buzz_spec.rb)
 
 Crie uma função que receba um número inteiro n e retorne uma lista de 1 até n seguindo as regras:
 
