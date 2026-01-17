@@ -1,6 +1,7 @@
-🎯 Desafios:
+## Desafios:
 
-FizzBuzz
+<details>
+  <summary><b>FizzBuzz</b></summary>
 <br>
 [codigo](https://github.com/rafaelsevla/coding-dojos-solo/blob/main/lib/fizz_buzz.rb) | [spec](https://github.com/rafaelsevla/coding-dojos-solo/blob/main/spec/fizz_buzz_spec.rb)
 
@@ -23,3 +24,4 @@ Saída:
 [1, 2, "Fizz", 4, "Buzz", "Fizz", 7, 8, "Fizz", "Buzz",
  11, "Fizz", 13, 14, "FizzBuzz"]
 ```
+</details>
