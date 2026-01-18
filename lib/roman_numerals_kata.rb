@@ -1,47 +1,16 @@
 # frozen_string_literal: true
 
-BASE_NUMBERS = [1, 5, 10, 50, 100, 500, 1000].freeze
-ROMAN_LETTERS = %w[I V X L C D M].freeze
-
-INVERT_ROMAN_MAP = {
-  'I' => 1,
-  'V' => 5,
-  'X' => 10,
-  'L' => 50,
-  'C' => 100,
-  'D' => 500,
-  'M' => 1000
-}.freeze
-
 ROMAN_MAP = {
-  1000 => 'M',
-  500 => 'D',
-  100 => 'C',
-  50 => 'L',
-  10 => 'X',
-  5 => 'V',
+  1000 => 'M', 900 => 'CM', 500 => 'D', 400 => 'CD',
+  100 => 'C', 90 => 'XC', 50 => 'L', 40 => 'XL',
+  10 => 'X', 9 => 'IX', 5 => 'V', 4 => 'IV',
   1 => 'I'
 }.freeze
 
-def quebradicos(result)
-  roman_symbol = result.split('').first
-  roman_index = ROMAN_LETTERS.index(roman_symbol)
-  next_letter = ROMAN_LETTERS[roman_index + 1]
-
-  puts "result #{result}"
-
-  "#{roman_symbol}#{next_letter}"
-end
-
 def convert(number)
-  return ROMAN_MAP[number] if ROMAN_MAP.key?(number)
+  return '' if number.zero?
 
   base_num = ROMAN_MAP.keys.find { |n| number >= n }
-  result = ROMAN_MAP[base_num] * (number / base_num)
 
-  puts "resssult #{result}"
-
-  return quebradicos(result) if result.size > 3
-
-  result
+  ROMAN_MAP[base_num] + convert(number - base_num)
 end
