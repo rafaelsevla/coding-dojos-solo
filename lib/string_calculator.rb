@@ -15,7 +15,6 @@ end
 
 def split_and_sum(text)
   splited = text.split(',')
-  puts "splited #{splited}"
   raise_if_negative_numbers(splited)
   with_thousands_ignored = splited.map { |num| ignore_thousands(num) }
 
@@ -38,6 +37,3 @@ def add(text)
     e.message
   end
 end
-
-puts add('1')
-puts add('1,-2,-3')
